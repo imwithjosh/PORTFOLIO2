@@ -116,7 +116,10 @@ footer ul li a{
     float: left;
 }
 
-
+.content a {
+    text-decoration: none;
+    color:#2596d1;
+}
 
 /* Contact Us  */
 .content input,textarea{
