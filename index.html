@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oyewale Tayo Olamide</title>
-    <link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/stylesmscreen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
@@ -18,50 +20,64 @@
 <body>
 <nav>
 <ul class="leftNav">
-    <li><a href="index">Oyewale Tayo</a></li>
+    <li><a href="index" >Oyewale Tayo</a></li>
 </ul>
 <ul class="rightNav">
     <li><a href="about">About Me</a></li>
     <li><a href="work">My Work</a></li>
     <li><a href="contact">Contact</a></li> 
 </ul>
+
+<div class="rightNavMobile" id="rightNavMobileID">
+    <div class='line'></div>
+    <div class='line'></div>
+    <div class='line'></div>
+    
+    <div class="navMenu">
+        <a href="about">About Me</a>
+        <a href="work">My Work</a>
+        <a href="contact">Contact</a>
+    </div>
+</div>
 </nav>
 <!-- END NAV-->
  
 <section class="desc">
     <div class="img"><img src="assets/img/picture1.jpg" /></div>
-    <h1>Oyewale Tayo Olamide</h1>
+    <h1 id="oyewaleName"></h1>
     <h3>Creative Frontend Developer</h3>
 </section>
-
 
 <section class="mywork">
     <h1>Brief Intro</h1>
 <p>A highly motivated, confident and creative web developer experienced in building user friendly website and applications
 using Html , CSS , JavaScript, React, Node Js and PostgreSQL. I thrive on challenges willing to learn new things, a team
-player and ready to break new grounds.</p>
+player and ready to break new grounds.</p> 
+    <a href="assets/OyewaleResume.pdf" target="_blank"  > View my Resume</a>
 </section>
 
 <section class="SkillSet">
 <div class="SkillSetDiv">
     <div class="SkillSetsub"> 
-    <p><img src="assets/img/picture1.jpg"></p>
+        <img src="assets/img/picture1.jpg">
     </div>
     <div class="SkillSetsub" style="text-align: left;">
         <h1 style="text-align: left;font-size: 2em;">My Skills</h1>
-    <p>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JAVASCRIPT</li>
-            <li>REACT</li>
-            <li>REACT</li>
-            <li>REACT</li>
-        </ul>
- 
-
-        <a href="assets/OyewaleResume.pdf" target="_blank" class="button"> View my Resume</a>
-    </p>
+<div class="progressMenu">
+    <div class="progress">
+        <div class="progresinfo bg-darkred text-white">HTML</div><div class="progresshow bg-red text-white w-100"> 50%</div> 
+    </div>
+    <div class="progress">
+        <div class="progresinfo bg-darkwhite text-red">CSS</div><div class="progresshow bg-white text-red w-50">50%</div> 
+    </div>
+    <div class="progress">
+        <div class="progresinfo bg-darkred text-white">JAVASCRIPT</div><div class="progresshow bg-red text-white w-75">50%</div> 
+    </div>
+    <div class="progress">
+        <div class="progresinfo bg-darkwhite text-red">REACT</div><div class="progresshow bg-white text-red w-100">50%</div> 
+    </div> 
+        
+</div>
     </div>
 </div>
 </section>
@@ -118,5 +134,29 @@ player and ready to break new grounds.</p>
             </ul>
     </div>
 </footer>
+
+<script>
+    function myFunction() {
+       var element = document.getElementById("rightNavMobileID");
+       element.classList.toggle("navMenuShow"); 
+    }
+</script>
+
+<script>
+    var i = 0;
+    var txt = 'Oyewale Tayo Olamide';
+    var speed = 50;
+    
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("oyewaleName").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    } typeWriter();
+setInterval(function(){typeWriter();},2000); 
+</script>
+
+
 </body>
 </html>

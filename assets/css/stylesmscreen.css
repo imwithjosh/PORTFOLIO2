@@ -1,126 +1,57 @@
 
-nav{
-    position: relative; 
-    z-index: 200000;
-    width:100%; 
-    height:50px;
-    line-height: 50px;
-    list-style: none;
-    background-color: white;
-    color:black;
-    text-transform: uppercase;
-    clear:both;
-    overflow: auto;
-    border-bottom: 1px solid rgb(209, 209, 208);
-}
-nav .leftNav{
-    float:left;
-    margin-left:10px;
-}
-nav .leftNav li{
-    list-style: none;
-}
-nav .leftNav li a{
-    text-decoration: none;
-    padding: 5px;
-    color:black;
-}
-nav .leftNav li a:hover{ 
-    color:rgb(131, 122, 122);
-}
-
-
-
-.bg-red{
-    background-color: red;
-}
-.bg-darkred{
-    background-color: rgb(129, 1, 1);
-}
-.bg-white{
-    background-color: white;
-}
-.bg-darkwhite{
-    background-color: rgb(228, 224, 224);
-}
-.bg-blue{
-    background-color: #2596D1;
-}
-.bg-darkblue{
-    background-color: #033e5e;
-}
-.text-red{
-    color: red;
-}
-.text-darkred{
-    color: rgb(129, 1, 1);
-}
-.text-white{
-    color: white;
-}
-.text-darkwhite{
-    color: rgb(228, 224, 224);
-}
-.text-blue{
-    color: #2596D1;
-}
-.text-darkblue{
-    color: #033e5e;
-}
-.w-25{
-    width:25%;
-    max-width: 250px;
-}
-.w-50{
-    width:50%;
-    max-width: 300px;
-}
-.w-75{
-    width:75%;
-    max-width: 300px;
-}
-.w-100{
-    width:68.5%;
-    max-width: 300px;
-}
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 600.5px) {
+  /* On screens that are 600px or less, set the background color to olive */
+  @media screen and (max-width: 600px) {
     *{
         margin: 0px;
         padding: 0px;
-        font-size: 15px;
+        font-size: 14px;
         font-family: Montserrat,Roboto,helvetica neue,Helvetica,Arial,sans-serif;
     }
-
-    nav .rightNavMobile{
+    nav .rightNav{
         display: none;
     }
-    nav .rightNav{
-        display:inline;
-        float:right;
+    nav .rightNavMobile{
+        position: fixed;
+        top: 5px;
+        right: 3px; 
+        margin-left: 10px;
+        float: right;
     }
-    nav .rightNav li{
-        display:inline; 
-        float:left;
-        margin-right:5px;
+    nav .rightNavMobile .navMenu{ 
+        display: none; 
+        position: absolute;
+        top: 25px;
+        right: 5px;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+        z-index: 1000000;  
+        margin-right:15px; 
+        clear:both;
+        text-align: center;
+        overflow: auto;
+        
     }
-    nav .rightNav li a{
+    nav .rightNavMobile .line{
+        position: relative;
+        width: 30px;
+        height: 4px;
+        background-color: black;
+        margin: 4px 25px;
+    }
+    nav .rightNavMobile:hover .navMenu{
+        display:block;
+        transition: 1s ease-in-out;
+    } 
+    nav .rightNavMobile .navMenu a{
+        display:block;
         text-decoration: none;
-        padding: 15px;
-        color:rgb(131, 122, 122);
+        padding: 1px 15px;
+        font-size: 13px;
+        color:#2596D1; 
     }
-    nav .rightNav li a:hover{ 
-        color:black;
-        background-color: bisque;
+    nav .rightNavMobile .navMenu a:hover{ 
+        color:#06405f;
     }
 
 
@@ -130,13 +61,12 @@ nav .leftNav li a:hover{
 
 
     .desc{
-        position: relative;
+        position: relative; 
         z-index: 1;
         margin-bottom: 30px;
         background-color: aliceblue;
         text-align: center;
-        padding-top:50px;
-        padding-bottom:30px;
+        padding:50px 30px 30px 30px ;  
         border-bottom: 1px solid  rgb(209, 209, 208);
     }
     .desc .img{
@@ -148,14 +78,14 @@ nav .leftNav li a:hover{
         border-radius: 90px;
     }
     .desc h1{
-        font-size: 2.5em;
+        font-size: 1.7em;
         color: #3b3838;
         letter-spacing: 4px;
         font-weight: bold; 
         text-transform: uppercase;
     }
     .desc h3{ 
-        font-size: 27px;
+        font-size: 18px;
         font-family: Roboto;
     }
     
@@ -164,16 +94,15 @@ nav .leftNav li a:hover{
 
 
 
-
     .mywork{ 
         text-align: center;
         margin: 50px auto;
-        width:80%;
-        padding:100px 0;
+        width:90%;
+        padding:70px 0;
     } 
     .mywork h1{  
         font-family: Roboto;
-        font-size: 2.5em;
+        font-size: 1.8em;
         color: #3b3838;
         letter-spacing: 4px;
         font-weight: bold;
@@ -183,9 +112,10 @@ nav .leftNav li a:hover{
     .mywork p{  
         font-family: Roboto;
         color: #706f6f;
-        font-size: 1.375em;
+        font-size: 1.11em;
         line-height: 1.5em;
     }
+    
     .mywork a{  
         display: block;
         width: 200px;
@@ -264,6 +194,8 @@ nav .leftNav li a:hover{
     }
     
     
+
+
     .SkillSet{ 
         text-align: center;
         padding: 100px 0;
@@ -273,9 +205,7 @@ nav .leftNav li a:hover{
     }
     .SkillSet .SkillSetDiv{ 
         text-align: center; 
-        width:80%;  
-        clear: both;
-        overflow: auto;
+        width:80%;   
         margin: auto;
     
     }
@@ -283,22 +213,22 @@ nav .leftNav li a:hover{
         text-align: center;
         padding: 30px 0;
         margin: auto;
-        width:49%; 
+        width:100%; 
         background-color: #2596d1;
-        color: #fff;
-        float: left;
-    
+        color: #fff; 
+    }
+    .SkillSet .SkillSetsub img{ 
+        max-width: 150px; 
     }
     .SkillSet h1{  
         font-family: Roboto;
-        font-size: 2.5em;
+        font-size: 1.5em;
         color: #fff;
         letter-spacing: 4px;
         font-weight: 800;
         margin-bottom: 0.625em;
         text-transform: uppercase;
-    } 
-
+    }
     .SkillSet .progressMenu{ 
         font-family: Roboto;
         color: #fff;
@@ -347,115 +277,10 @@ nav .leftNav li a:hover{
 
 
 
-}
-  
 
 
 
 
 
 
-
-footer{
-    background-color: rgb(6, 5, 53);
-    color:#fff;
-    width:100%;
-    height:100px;
-    text-align: center;
 }
-footer .Name{
-    padding:10px;
-}
-footer ul li{
-    display:inline;
-    margin-right: 10px;
-}
-footer ul li a{
-    color:burlywood;
-    text-decoration: none;
-}
-
-/*  ABOUT ME  */
-.backgrounds{
-    width:100%;
-    height:300px;
-    background: url("../img/bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: #3b3838;
-}
-.backgrounds h2{
-    color:white;
-    font-size: 35px;
-    line-height: 350px;
-    text-align: center;
-}
-.content{
-    max-width:80%;
-    width:800px;
-    margin: 50px auto;
-}
-.content h2{
-    font-size: 2.0em; 
-    letter-spacing: 4px;
-    font-weight: 800;
-    margin-bottom: 0.625em;
-    text-transform: uppercase;
-}
-.content div{
-    clear: both;
-    overflow: auto;
-    margin: 15px;
-}
-.content div img{ 
-    float: left;
-    padding: 10px;
-}
-.content div p{
-    font-size: 1.1em;
-    line-height: 1.5em;
-    font-weight: lighter;
-    padding: 10px;
-    text-align: justify;
-    float: left;
-}
-
-.content a {
-    text-decoration: none;
-    color:#2596d1;
-}
-
-/* Contact Us  */
-.content input,textarea{
-display: block;
-width: 80%; 
-padding: .375rem .75rem;
-font-size: 1rem;
-font-weight: 400;
-line-height: 1.5;
-color: #495057;
-background-color: #fff;
-background-clip: padding-box;
-border: 1px solid #ced4da;
-border-radius: .25rem;
-outline:none;
-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-.content button{
-    display: block;
-    width: 84%; 
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #fff;
-    background-color: #2596d1;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    outline:none;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    cursor: pointer;
-}
-
