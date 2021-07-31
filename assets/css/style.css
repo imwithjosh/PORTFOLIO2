@@ -1,34 +1,4 @@
 
-nav{
-    position: relative; 
-    z-index: 200000;
-    width:100%; 
-    height:50px;
-    line-height: 50px;
-    list-style: none;
-    background-color: white;
-    color:black;
-    text-transform: uppercase;
-    clear:both;
-    overflow: auto;
-    border-bottom: 1px solid rgb(209, 209, 208);
-}
-nav .leftNav{
-    float:left;
-    margin-left:10px;
-}
-nav .leftNav li{
-    list-style: none;
-}
-nav .leftNav li a{
-    text-decoration: none;
-    padding: 5px;
-    color:black;
-}
-nav .leftNav li a:hover{ 
-    color:rgb(131, 122, 122);
-}
-
 
 
 .bg-red{
@@ -90,9 +60,6 @@ nav .leftNav li a:hover{
 
 
 
-
-
-
 @media screen and (min-width: 600.5px) {
     *{
         margin: 0px;
@@ -100,70 +67,70 @@ nav .leftNav li a:hover{
         font-size: 15px;
         font-family: Montserrat,Roboto,helvetica neue,Helvetica,Arial,sans-serif;
     }
+   
+.topnav {
+    overflow: hidden;
+    clear: both;
+    background-color: #fff;
+    position: relative;
+}
+.topnav #myLinks {
+    display: inline-block;
+    float: right;
+}
+.topnav a {
+    color: #2596d1;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: inline-block;
+}
+.topnav a.icon { 
+    display: none; 
+}
+.topnav a:hover {
+    background-color: #2596d1;
+    color: white;
+}
+.topnav .active:hover {
+    background-color: #fff;;
+    color: #095781;
+}
 
-    nav .rightNavMobile{
-        display: none;
-    }
-    nav .rightNav{
-        display:inline;
-        float:right;
-    }
-    nav .rightNav li{
-        display:inline; 
-        float:left;
-        margin-right:5px;
-    }
-    nav .rightNav li a{
-        text-decoration: none;
-        padding: 15px;
-        color:rgb(131, 122, 122);
-    }
-    nav .rightNav li a:hover{ 
-        color:black;
-        background-color: bisque;
-    }
 
 
-
-
-
-
-
-    .desc{
-        position: relative;
-        z-index: 1;
-        margin-bottom: 30px;
-        background-color: aliceblue;
-        text-align: center;
-        padding-top:50px;
-        padding-bottom:30px;
-        border-bottom: 1px solid  rgb(209, 209, 208);
-    }
-    .desc .img{
-        border-radius: 50px; 
-    }
-    .desc img{
-        width:150px;
-        height:150px;
-        border-radius: 90px;
-    }
-    .desc h1{
-        font-size: 2.5em;
-        color: #3b3838;
-        letter-spacing: 4px;
-        font-weight: bold; 
-        text-transform: uppercase;
-    }
-    .desc h3{ 
-        font-size: 27px;
-        font-family: Roboto;
-    }
+.desc{
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    background-color: aliceblue;
+    text-align: center;
+    padding-top:50px;
+    padding-bottom:30px;
+    border-bottom: 1px solid  rgb(209, 209, 208);
+}
+.desc .img{
+    border-radius: 50px; 
+}
+.desc img{
+    width:150px;
+    height:150px;
+    border-radius: 90px;
+}
+.desc h1{
+    font-size: 2.5em;
+    color: #3b3838;
+    letter-spacing: 4px;
+    font-weight: bold; 
+    text-transform: uppercase;
+} 
+.desc a{ 
+    font-size: 27px;
+    font-family: Roboto;
+    text-decoration: none;
+    color: #2596d1;
+}
     
-
-
-
-
-
 
     .mywork{ 
         text-align: center;
@@ -247,23 +214,49 @@ nav .leftNav li a:hover{
         clear: both;
         overflow: auto;
         margin: auto;
+        background-color: rgb(255, 0, 0);
     }
-    .mywork2 .samples1{  
+    .mywork2 .samples1{
         text-align: center;
-        padding: 30px 0;
+        position:relative;
         margin: auto;
-        width:30%;  
+        width:32%;
         color: #fff;
+        background-color: rgb(93, 0, 214);
         float: left;
+    } 
+    .mywork2 .samples1 .cont{
+        position: absolute;
+        display: block;
+        width: 90%;
+        background-color: #2596d1;
+        vertical-align: middle;
+        text-align: center;
+        margin: auto;
     }
-    .mywork2 .samples1:hover{   
-        box-shadow: 0px 0px 5px #2596d1;
-    }
-    .mywork2 .samples1 img{   
-        width:90%;   
+    .mywork2 .samples1 img{
+        width:90%;
     }
     
     
+
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 1rem; 
+    padding: 0px;
+  }
+  
+  .grid-container > div { 
+    text-align: center;
+    padding: 10px 0;
+    font-size: 30px;
+  }
+
+
+
+
     .SkillSet{ 
         text-align: center;
         padding: 100px 0;
@@ -298,36 +291,29 @@ nav .leftNav li a:hover{
         margin-bottom: 0.625em;
         text-transform: uppercase;
     } 
-
-    .SkillSet .progressMenu{ 
-        font-family: Roboto;
-        color: #fff;
-        font-size: 1.375em;  
+ 
+    .SkillSet .progressMenu{  
+        font-family: Roboto;  
+        margin-bottom: 0.625em; 
     }
-    .SkillSet .progress{ 
-        width:100%;
-        overflow: hidden;
-        clear: both;
-        margin:5px 0; 
-        background-color: #cecccc;
-        border-radius: 0 10px 10px 0;
-    }
-    .SkillSet .progresinfo{ 
-        width:30%;
-        font-size: 10px;
-        max-width:65px;
-        height:30px;
-        line-height: 30px;
-        padding-left: 10px;
-        float:left;
-    }
-    .SkillSet .progresshow{  
-        font-size: 10px;
-        height:30px;
-        line-height: 30px;
-        padding-left: 10px;
-        float:left;
+ 
+    .SkillSet .progress{  
+        font-family: Roboto;  
+        margin-bottom: 0.625em; 
     } 
+ .SkillSet .progress h2{  
+        font-family: Roboto;
+        font-size: 1.3em;
+        color: #fff;
+        letter-spacing: 2px; 
+        margin-bottom: 0.625em; 
+    } 
+ .SkillSet .progress p{  
+        font-family: Roboto; 
+        color: #fff; 
+        margin-bottom: 0.625em; 
+    } 
+ 
 
 
 
@@ -335,26 +321,28 @@ nav .leftNav li a:hover{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #2596d1;
+        color: white;
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 4px;
+      }
+      
+      #myBtn:hover {
+        background-color: #555;
+      }
 
 }
   
-
-
-
-
-
-
 
 footer{
     background-color: rgb(6, 5, 53);
@@ -397,7 +385,7 @@ footer ul li a{
     margin: 50px auto;
 }
 .content h2{
-    font-size: 2.0em; 
+    font-size: 1.0em; 
     letter-spacing: 4px;
     font-weight: 800;
     margin-bottom: 0.625em;

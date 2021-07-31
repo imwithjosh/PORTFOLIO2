@@ -18,34 +18,27 @@
 
 </head>
 <body>
-<nav>
-<ul class="leftNav">
-    <li><a href="index" >Oyewale Tayo</a></li>
-</ul>
-<ul class="rightNav">
-    <li><a href="about">About Me</a></li>
-    <li><a href="work">My Work</a></li>
-    <li><a href="contact">Contact</a></li> 
-</ul>
-
-<div class="rightNavMobile" id="rightNavMobileID">
-    <div class='line'></div>
-    <div class='line'></div>
-    <div class='line'></div>
-    
-    <div class="navMenu">
+<nav class="topnav">
+    <a href="index" class="active">Oyewale Tayo</a>
+    <div id="myLinks">
         <a href="about">About Me</a>
         <a href="work">My Work</a>
+        <a href="moments">Moments</a>
         <a href="contact">Contact</a>
     </div>
-</div>
+    <a href="javascript:void(0);" class="icon" onclick="myNavMobleSwitch()">
+      <i class="fa fa-bars"></i>
+    </a>
 </nav>
 <!-- END NAV-->
  
 <section class="desc">
     <div class="img"><img src="assets/img/picture1.jpg" /></div>
-    <h1 id="oyewaleName"></h1>
-    <h3>Creative Frontend Developer</h3>
+    <h1 >Oyewale Tayo Olamide</h1>
+    <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im a Creative Frontend Developer.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+        <span class="wrap"></span>
+    </a>
+ 
 </section>
 
 <section class="mywork">
@@ -65,16 +58,20 @@ player and ready to break new grounds.</p>
         <h1 style="text-align: left;font-size: 2em;">My Skills</h1>
 <div class="progressMenu">
     <div class="progress">
-        <div class="progresinfo bg-darkred text-white">HTML</div><div class="progresshow bg-red text-white w-100"> 50%</div> 
+        <h2 class="">HTML</h2>
+        <p>Proficient with the right application of html syntax and semantics. Ability to write well structured and readable web page</p> 
     </div>
     <div class="progress">
-        <div class="progresinfo bg-darkwhite text-red">CSS</div><div class="progresshow bg-white text-red w-50">50%</div> 
+        <h2 class="">CSS</h2>
+        <p>Proficient with the right application of html syntax and semantics. Ability to write well structured and readable web page</p> 
     </div>
     <div class="progress">
-        <div class="progresinfo bg-darkred text-white">JAVASCRIPT</div><div class="progresshow bg-red text-white w-75">50%</div> 
+        <h2 class="">JAVASCRIPT</h2>
+        <p>Majority of websites are powered by javascript.. I know how to write clean and</p> 
     </div>
     <div class="progress">
-        <div class="progresinfo bg-darkwhite text-red">REACT</div><div class="progresshow bg-white text-red w-100">50%</div> 
+        <h2 class="">REACT</h2>
+        <p>I am Proficient with React, I love working  with React because it helps me take care of  state management. </p> 
     </div> 
         
 </div>
@@ -92,34 +89,25 @@ player and ready to break new grounds.</p>
     wireframing, design & development. This process allows me to create great
     product with client goals in mind.</p>
     </div>
-    <div class="samples">
-        <div class="samples1"> 
-            <img src="assets/img/picture1.jpg" />
-        </div>
-        <div class="samples1"> 
-            <img src="assets/img/picture1.jpg" />
-        </div>
-        <div class="samples1"> 
-            <img src="assets/img/picture1.jpg" />
-        </div>
-        <div class="samples1">
-            <img src="assets/img/picture1.jpg" />
-        </div>
-        <div class="samples1">
-            <img src="assets/img/picture1.jpg" />
-        </div>
-        <div class="samples1">
-            <img src="assets/img/picture1.jpg" />
-        </div> 
+
+    <div class="grid-container">
+        <div><a href="#"><img src="assets/img/picture1.jpg" ></a></div> 
+        <div><a href="#"><img src="assets/img/picture1.jpg"></a></div>
+        <div><a href="#"><img src="assets/img/picture1.jpg"></a></div>
+        <div><a href="#"><img src="assets/img/picture1.jpg"></a></div>
+        <div><a href="#"><img src="assets/img/picture1.jpg"></a></div>
+        <div><a href="#"><img src="assets/img/picture1.jpg"></a></div>
+        <div><a href="#"><img src="assets/img/picture1.jpg"></a></div>
+        
     </div>
+ 
 </section>
 
+ 
 
 
 
-
-
-
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <footer>
     <div class="Name">
@@ -135,26 +123,104 @@ player and ready to break new grounds.</p>
     </div>
 </footer>
 
+
 <script>
-    function myFunction() {
-       var element = document.getElementById("rightNavMobileID");
-       element.classList.toggle("navMenuShow"); 
+    function myNavMobleSwitch() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
     }
 </script>
 
 <script>
-    var i = 0;
-    var txt = 'Oyewale Tayo Olamide';
-    var speed = 50;
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
     
-    function typeWriter() {
-      if (i < txt.length) {
-        document.getElementById("oyewaleName").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
       }
-    } typeWriter();
-setInterval(function(){typeWriter();},2000); 
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+</script>
+
+
+
+
+
+
+
+
+<script>
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
 </script>
 
 

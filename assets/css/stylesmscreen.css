@@ -7,58 +7,37 @@
         font-size: 14px;
         font-family: Montserrat,Roboto,helvetica neue,Helvetica,Arial,sans-serif;
     }
-    nav .rightNav{
-        display: none;
-    }
-    nav .rightNavMobile{
-        position: fixed;
-        top: 5px;
-        right: 3px; 
-        margin-left: 10px;
-        float: right;
-    }
-    nav .rightNavMobile .navMenu{ 
-        display: none; 
-        position: absolute;
-        top: 25px;
-        right: 5px;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
-        z-index: 1000000;  
-        margin-right:15px; 
-        clear:both;
-        text-align: center;
-        overflow: auto;
-        
-    }
-    nav .rightNavMobile .line{
-        position: relative;
-        width: 30px;
-        height: 4px;
-        background-color: black;
-        margin: 4px 25px;
-    }
-    nav .rightNavMobile:hover .navMenu{
-        display:block;
-        transition: 1s ease-in-out;
-    } 
-    nav .rightNavMobile .navMenu a{
-        display:block;
-        text-decoration: none;
-        padding: 1px 15px;
-        font-size: 13px;
-        color:#2596D1; 
-    }
-    nav .rightNavMobile .navMenu a:hover{ 
-        color:#06405f;
-    }
-
-
-
-
-
-
+     
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+.topnav #myLinks {
+display: none;
+}
+.topnav a {
+color: white;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+display: block;
+}
+.topnav a.icon {
+background: black;
+display: block;
+position: absolute;
+right: 0;
+top: 0;
+}
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+.active {
+background-color: #2596d1;
+color: white;
+}
 
     .desc{
         position: relative; 
@@ -158,7 +137,7 @@
     }
     .mywork2 h1{  
         font-family: Roboto;
-        font-size: 2.5em;
+        font-size: 1em;
         color: #2596d1;
         letter-spacing: 4px;
         font-weight: 800;
@@ -193,9 +172,20 @@
         width:90%;   
     }
     
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr  ;
+    grid-gap: 1rem; 
+    padding: 2px;
+    }
     
-
-
+.grid-container > div { 
+    text-align: center;
+    padding: 10px 0;
+    font-size: 30px;
+    }
+    
     .SkillSet{ 
         text-align: center;
         padding: 100px 0;
@@ -228,61 +218,50 @@
         font-weight: 800;
         margin-bottom: 0.625em;
         text-transform: uppercase;
-    }
-    .SkillSet .progressMenu{ 
-        font-family: Roboto;
-        color: #fff;
-        font-size: 1.375em;  
-    }
-    .SkillSet .progress{ 
-        width:100%;
-        overflow: hidden;
-        clear: both;
-        margin:5px 0; 
-        background-color: #cecccc;
-        border-radius: 0 10px 10px 0;
-    }
-    .SkillSet .progresinfo{ 
-        width:30%;
-        font-size: 10px;
-        max-width:65px;
-        height:30px;
-        line-height: 30px;
-        padding-left: 10px;
-        float:left;
-    }
-    .SkillSet .progresshow{  
-        font-size: 10px;
-        height:30px;
-        line-height: 30px;
-        padding-left: 10px;
-        float:left;
     } 
- .content h2{
-     font-size:small;
- }
+
+    .SkillSet .progressMenu{  
+        font-family: Roboto;  
+        margin-bottom: 0.625em; 
+    }
+ 
+    .SkillSet .progress{  
+        font-family: Roboto;  
+        margin-bottom: 0.625em; 
+    } 
+ .SkillSet .progress h2{  
+        font-family: Roboto;
+        font-size: 1.3em;
+        color: #fff;
+        letter-spacing: 2px; 
+        margin-bottom: 0.625em; 
+    } 
+ .SkillSet .progress p{  
+        font-family: Roboto; 
+        color: #fff; 
+        margin-bottom: 0.625em; 
+    } 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #2596d1;
+        color: white;
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 4px;
+      }
+      
+      #myBtn:hover {
+        background-color: #555;
+      }
 
 
 }
