@@ -5,22 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get In Touch </title>
-    <link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/stylesmscreen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-<nav>
-<ul class="leftNav">
-    <li><a href="index">Oyewale Tayo</a></li>
-</ul>
-<ul class="rightNav">
-    <li><a href="about">About Me</a></li>
-    <li><a href="work">My Work</a></li>
-    <li><a href="contact">Contact</a></li> 
-</ul>
-</nav>
+
+    <nav class="topnav">
+        <a href="index" class="active">Oyewale Tayo</a>
+        <div id="myLinks">
+            <a href="about">About Me</a>
+            <a href="work">My Work</a>
+            <a href="moments">Moments</a>
+            <a href="contact">Contact</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myNavMobleSwitch()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </nav>
 <!-- END NAV-->
 
 
@@ -55,6 +59,7 @@
 
 </section>
 
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <footer>
     <div class="Name">
         &copy; 2021 Oyewale Tayo
@@ -68,5 +73,38 @@
             </ul>
     </div>
 </footer>
+<script>
+    function myNavMobleSwitch() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+</script>
+
+<script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+</script>
+
 </body>
 </html>
